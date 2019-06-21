@@ -46,7 +46,7 @@ public class MorphiaOperations {
 		// insertnew and delete it
 		
 		saveAccounts(userName);
-		mongoConnectionManager.getDatastore().delete(mongoConnectionManager.getDatastore().find(Account.class).filter("user", "tmpuser"));
+		mongoConnectionManager.getDatastore().delete(mongoConnectionManager.getDatastore().find(Account.class).filter("user", userName));
 		log.info(" deleted "+userName+" successfully ");
 	}
 	
